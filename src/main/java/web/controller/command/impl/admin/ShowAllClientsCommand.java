@@ -35,10 +35,7 @@ public class ShowAllClientsCommand implements Command {
     public Map<String, Object> execute(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         Map<String, Object> map = new HashMap<>();
         List<Account> clients = getClient();
-        request.setAttribute("clients", clients);
-        for (Account ac: clients) {
-            System.out.println(ac);
-        }
+        request.getSession().setAttribute("clients", clients);
         map.put(PAGE, SHOW_ALL_CLIENTS_JSP);
         map.put(CLIENTS, clients);
         return map;

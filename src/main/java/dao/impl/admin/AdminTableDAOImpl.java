@@ -31,7 +31,7 @@ public class AdminTableDAOImpl implements ITableDAO {
         try {
             con = DBManager.getConnection();
             Statement statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery(SELECT_ALL_CLIENTS);//поменять запрос
+            ResultSet resultSet = statement.executeQuery(SELECT_ALL_CLIENTS);
             while (resultSet.next()) {
                 Account client = new Account();
                 client.setId(resultSet.getString(ID));

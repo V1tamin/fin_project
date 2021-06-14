@@ -44,6 +44,16 @@ public class AdminAccountDAO implements IAccountDAO {
         return Optional.empty();
     }
 
+    @Override
+    public boolean deleteByName(String name) {
+        return false;
+    }
+
+    @Override
+    public boolean deleteById(String id) {
+        return false;
+    }
+
     private Account initAccount(PreparedStatement st) throws SQLException {
         ResultSet set = st.executeQuery();
         if (set.next()) {

@@ -5,9 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import web.controller.command.*;
 import web.controller.command.impl.*;
-import web.controller.command.impl.admin.AdminLoginCommand;
-import web.controller.command.impl.admin.AdminPersonalPatrolCommand;
-import web.controller.command.impl.admin.ShowAllClientsCommand;
+import web.controller.command.impl.admin.*;
 import web.controller.command.impl.manager.ManagerLoginCommand;
 
 import javax.naming.NamingException;
@@ -47,6 +45,8 @@ public class ServletController extends HttpServlet {
         commands.put("manager_auth", new ManagerLoginCommand());
         commands.put("all_clients", new ShowAllClientsCommand());
         commands.put("admin_patrol", new AdminPersonalPatrolCommand());
+        commands.put("delete_user", new DeleteUserCommand());
+        commands.put("create_new_user_admin", new CreateNewUserCommand());
         //commands.put("booked_rooms", new BookedRoomsCommand());
     }
 

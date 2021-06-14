@@ -11,4 +11,6 @@ import java.util.Optional;
 public interface IAccountDAO {
     Optional<Account> findByName(String name);
     Optional<Account> findById(String  id);
+    boolean deleteByName(String name);
+    boolean deleteById(String  id);
 }

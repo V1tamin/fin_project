@@ -1,11 +1,11 @@
 package dao.impl;
 
+import dao.ITableDAO;
 import model.Account;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import service.DBManager;
-import dao.ITableDAO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static constant.Constants.*;
-import static constant.SQLConstants.SELECT_ALL_CLIENTS;
+import static constant.SQLConstants.SELECT_ALL_APARTMENTS;
 
 /**
  * @author Anton Lopatin on 07.06.2021
@@ -31,7 +31,7 @@ public class TableDAOImpl implements ITableDAO {
         try {
             con = DBManager.getConnection();
             Statement statement = con.createStatement();
-            ResultSet resultSet = statement.executeQuery(SELECT_ALL_CLIENTS);//поменять запрос
+            ResultSet resultSet = statement.executeQuery(SELECT_ALL_APARTMENTS);
             while (resultSet.next()) {
                 Account client = new Account();
                 client.setId(resultSet.getString(ID));

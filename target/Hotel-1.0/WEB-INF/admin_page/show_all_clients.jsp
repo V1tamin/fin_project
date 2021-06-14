@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Title</title>
@@ -22,25 +22,25 @@
 </form>
 
 <table>
-    <c:forEach var="item" items="${clients}">
+    <c:forEach var="client" items="${clients}">
         <table style="margin: auto" border="1">
             <tr style="margin-left: 25px">
-                <li> ID: ${item.id}</li>
-                <li>First Name: ${item.firstname}</li>
-                <li>Last Name: ${item.lastname}</li>
-                <li>Patronymic: ${item.patronymic}</li>
-                <li>Login: ${item.login}</li>
-                <li>Password: ${item.password}</li>
+                <li> ID: ${client.id}</li>
+                <li>First Name: ${client.firstname}</li>
+                <li>Last Name: ${client.lastname}</li>
+                <li>Patronymic: ${client.patronymic}</li>
+                <li>Login: ${client.login}</li>
+                <li>Password: ${client.password}</li>
 
                 <form action="${pageContext.request.contextPath}/controller" method="post">
                     <input type="hidden" name="command" value="delete_user">
-                    <input type="hidden" name="id" value="${item.id}">
+                    <input type="hidden" name="id" value="${client.id}">
                     <button class="btn btn-outline-success m-3">Delete</button>
                 </form>
 
                 <form action="${pageContext.request.contextPath}/controller" method="post">
                     <input type="hidden" name="command" value="edit_user">
-                    <input type="hidden" name="id" value="${item.id}">
+                    <input type="hidden" name="id" value="${client.id}">
                     <button class="btn btn-outline-success m-3">Edit</button>
                 </form>
                 <hr>

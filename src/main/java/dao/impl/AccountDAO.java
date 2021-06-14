@@ -2,7 +2,6 @@ package dao.impl;
 
 import dao.IAccountDAO;
 import model.Account;
-import model.Role;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,8 +14,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 import static constant.Constants.*;
-import static constant.SQLConstants.SELECT_ACCOUNT_BY_ID;
-import static constant.SQLConstants.SELECT_ACCOUNT_BY_LOGIN;
+import static constant.SQLConstants.*;
 
 
 /**
@@ -55,6 +53,41 @@ public class AccountDAO implements IAccountDAO {
             DBManager.close(con);
         }
         return Optional.ofNullable(acc);
+    }
+
+    @Override
+    public boolean deleteByName(String name) {
+        Connection con = null;
+        try {
+            con = DBManager.getConnection();
+            PreparedStatement selectStatement = con.prepareStatement(DELETE_ACCOUNT_BY_LOGIN);
+            selectStatement.setString(1, name);
+            selectStatement.execute();
+            return true;
+        } catch (SQLException e) {
+            logger.log(Level.ERROR, e.getMessage());
+        } finally {
+            DBManager.close(con);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean deleteById(String id) {
+        Connection con = null;
+        try {
+            con = DBManager.getConnection();
+            PreparedStatement selectStatement = con.prepareStatement(DELETE_ACCOUNT_BY_ID);
+            System.out.println("Перед сетом: " + id);
+            selectStatement.setString(1, id);
+            selectStatement.execute();
+            return true;
+        } catch (SQLException e) {
+            logger.log(Level.ERROR, e.getMessage());
+        } finally {
+            DBManager.close(con);
+        }
+        return false;
     }
 
     private Account initAccount(PreparedStatement st) throws SQLException {
