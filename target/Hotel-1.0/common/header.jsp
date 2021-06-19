@@ -6,7 +6,7 @@
         <div class="container-fluid">
             <c:set var="auth" scope="session" value="${userLoggedIn}"/>
             <c:choose>
-                <c:when test="${userLoggedIn != true}">
+                <c:when test="${auth != true}">
                     <a class="navbar-brand" href="${pageContext.request.contextPath}/">Hotel</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarCollapse"

@@ -1,8 +1,10 @@
 package service.impl;
 
 import dao.IAccountDAO;
+import dao.IApartmentDAO;
 import dao.ITableDAO;
 import dao.impl.AccountDAO;
+import dao.impl.ApartmentTableDAO;
 import dao.impl.TableDAOImpl;
 import model.Account;
 import service.inter.LoginService;
@@ -21,7 +23,7 @@ import static constant.Constants.USER;
  */
 public class LoginServiceImpl implements LoginService {
     private final IAccountDAO accountDao = new AccountDAO();
-    private final ITableDAO tableDao = new TableDAOImpl();
+    private final IApartmentDAO apartmentDAO = new ApartmentTableDAO();
 
     @Override
     public Map<String, Object> login(String login, String password) throws SQLException, NamingException {
@@ -32,7 +34,7 @@ public class LoginServiceImpl implements LoginService {
         Account user = account.orElse(null);
         System.out.println("LoginServiceImpl.login");
         if (user != null) {
-            map.put(CATALOG, tableDao.getClientTable());
+            map.put(CATALOG, apartmentDAO.getApartmentTable());
         }
         return map;
     }

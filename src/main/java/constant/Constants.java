@@ -4,6 +4,7 @@ package constant;
  * @author Anton Lopatin on 28.05.2021
  */
 public class Constants {
+
     public static final String PAGE = "page";
     public static final String USER = "user";
     public static final String ADMIN = "admin";
@@ -20,6 +21,14 @@ public class Constants {
     public static final String FIRSTNAME = "firstname";
     public static final String LASTNAME = "lastname";
     public static final String PATRONYMIC = "patronymic";
+
+    public static final String APARTMENT_STATUS_ID = "apartment_status_id";
+    public static final String APARTMENT_REQUEST_ID = "request_id";
+    public static final String APARTMENT_BOOKING_ID = "booking_id";
+    public static final String APARTMENT_PRICE = "price";
+    public static final String APARTMENT_DESCRIPTION = "description";
+    public static final String APARTMENT_PLACES = "places";
+    public static final String APARTMENT_PHOTO_URL = "photo_url";
 
     public static final String ERR_MESSAGE = "errorMessage";
     public static final String ERROR_MESSAGE = "errorMessage";
@@ -39,6 +48,7 @@ public class Constants {
     public static final String SHOW_ALL_CLIENTS_JSP = "/WEB-INF/admin_page/show_all_clients.jsp";
 
     public static final String PERSONAL_ACC_JSP = "/personal.jsp";
+    public static final String SELECT_TIME_BOOKING_APARTMENT_JSP = "/select_time_booking_apartment.jsp";
 
     public static final String APP_NAME = "Hotel";
 }

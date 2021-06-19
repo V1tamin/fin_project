@@ -47,7 +47,9 @@ public class ServletController extends HttpServlet {
         commands.put("admin_patrol", new AdminPersonalPatrolCommand());
         commands.put("delete_user", new DeleteUserCommand());
         commands.put("create_new_user_admin", new CreateNewUserCommand());
-        //commands.put("booked_rooms", new BookedRoomsCommand());
+        //commands.put("insert_user", new CreateNewUserCommand());
+        commands.put("select_time_booked", new SelectTimeBookingApartmentCommand());
+        commands.put("booked_apartment", new BookedApartmentCommand());
     }
 
     @Override

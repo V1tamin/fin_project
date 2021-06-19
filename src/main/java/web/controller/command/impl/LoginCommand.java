@@ -17,7 +17,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import static constant.Constants.*;
-import static constant.SQLConstants.SELECT_ACCOUNT_BY_LOGIN;
 
 /**
  * @author Anton Lopatin on 28.05.2021
