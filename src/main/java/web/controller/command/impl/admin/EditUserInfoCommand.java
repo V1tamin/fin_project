@@ -1,7 +1,5 @@
 package web.controller.command.impl.admin;
 
-import dao.IAccountDAO;
-import dao.impl.AccountDAO;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,12 +16,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static constant.Constants.*;
-import static constant.SQLConstants.DELETE_ACCOUNT_BY_ID;
+import static constant.SQLConstants.EDIT_ACCOUNT_BY_ID;
 
 /**
- * @author Anton Lopatin on 20.06.2021
+ * @author Anton Lopatin on 21.06.2021
  */
-public class DeleteUserCommand implements Command {
+public class EditUserInfoCommand implements Command {
     private static final Logger logger = LogManager.getLogger();
 
     @Override
@@ -31,20 +29,23 @@ public class DeleteUserCommand implements Command {
         Map<String, Object> map = new HashMap<>();
 
         String id = request.getParameter(ID);
-        deleteById(id);
+        editById(id);
 
         map.put(PAGE, ADMIN_PARLOR_JSP);
         map.put(PAGE, SHOW_ALL_CLIENTS_JSP);
         return map;
     }
 
-    public boolean deleteById(String id) {
+    public boolean editById(String id) {
         Connection con = null;
         try {
             con = DBManager.getConnection();
             con.setAutoCommit(false);
-            PreparedStatement preparedStatement = con.prepareStatement(DELETE_ACCOUNT_BY_ID);
+            PreparedStatement preparedStatement = con.prepareStatement(EDIT_ACCOUNT_BY_ID);
             preparedStatement.setString(1, id);
+
+            //New info about client
+
             preparedStatement.execute();
             con.commit();
             return true;

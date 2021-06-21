@@ -12,7 +12,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 16.06.2021
  */
 public class DBManager {
     private static final Logger logger = LogManager.getLogger();
@@ -21,8 +21,6 @@ public class DBManager {
 
     private DBManager() {
     }
-
-    ///
 
     public static Connection getConnection() throws SQLException {
         if (dataSource == null) {

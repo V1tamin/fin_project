@@ -16,7 +16,7 @@ import java.util.Optional;
 import static constant.Constants.*;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class IndexCommand implements Command {
     private static final Logger logger = LogManager.getLogger();

@@ -21,7 +21,7 @@ import static constant.Constants.APARTMENTS_JSP;
 import static constant.Constants.PAGE;
 
 /**
- * @author Anton Lopatin on 03.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class ApartmentsCommand implements Command {
     private static final Logger logger = LogManager.getLogger();

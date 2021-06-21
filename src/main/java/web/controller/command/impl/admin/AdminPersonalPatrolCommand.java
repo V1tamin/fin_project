@@ -12,7 +12,7 @@ import java.util.Map;
 import static constant.Constants.*;
 
 /**
- * @author Anton Lopatin on 14.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class AdminPersonalPatrolCommand implements Command {
     @Override

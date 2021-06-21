@@ -18,7 +18,7 @@ import static constant.SQLConstants.SELECT_ADMIN_BY_LOGIN;
 
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 21.06.2021
  */
 public class AdminAccountDAO implements IAccountDAO {
     private static final Logger logger = LogManager.getLogger();

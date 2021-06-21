@@ -13,7 +13,7 @@ import static constant.Constants.PAGE;
 import static constant.Constants.SELECT_TIME_BOOKING_APARTMENT_JSP;
 
 /**
- * @author Anton Lopatin on 19.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class BookedApartmentCommand implements Command {
     @Override

@@ -1,7 +1,7 @@
 package constant;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 17.06.2021
  */
 public class SQLConstants {
     public static final String SELECT_ALL_CLIENTS = "SELECT *FROM client";
@@ -16,5 +16,6 @@ public class SQLConstants {
             "VALUE(?,?,?,?,?,?)";
 
     public static final String DELETE_ACCOUNT_BY_ID = "DELETE FROM client WHERE id = ?";
+    public static final String EDIT_ACCOUNT_BY_ID = "UPDATE client SET firstname=?, lastname=?,patronymic=?,login=?,password=? WHERE id=?";
     public static final String DELETE_ACCOUNT_BY_LOGIN = "DELETE FROM client WHERE client.login = ?";
 }

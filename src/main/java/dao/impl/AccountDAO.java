@@ -18,7 +18,7 @@ import static constant.SQLConstants.*;
 
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class AccountDAO implements IAccountDAO {
     private static final Logger logger = LogManager.getLogger();

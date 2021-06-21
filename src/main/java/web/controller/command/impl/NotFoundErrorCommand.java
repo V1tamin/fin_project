@@ -13,7 +13,7 @@ import static constant.Constants.ERROR_NOT_FOUND_CONTENT;
 import static constant.Constants.PAGE;
 
 /**
- * @author Anton Lopatin on 03.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class NotFoundErrorCommand implements Command {
     @Override

@@ -17,7 +17,7 @@ import static constant.Constants.CATALOG;
 import static constant.Constants.USER;
 
 /**
- * @author Anton Lopatin on 08.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class AdminLoginServiceImpl implements LoginService {
     private final IAccountDAO accountDao = new AdminAccountDAO();

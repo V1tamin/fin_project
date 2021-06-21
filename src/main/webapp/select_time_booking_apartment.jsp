@@ -1,19 +1,14 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Select time</title>
 
-    <!-- 1. Подключить CSS-файл Bootstrap 3 -->
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <!-- 2. Подключить CSS-файл библиотеки Bootstrap 3 DateTimePicker -->
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
-    <!-- 3. Подключить библиотеку jQuery -->
     <script src="js/jquery.min.js"></script>
-    <!-- 4. Подключить библиотеку moment -->
     <script src="js/moment-with-locales.min.js"></script>
-    <!-- 5. Подключить js-файл фреймворка Bootstrap 3 -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
     <script src="js/bootstrap-datetimepicker.min.js"></script>
 </head>
 <body>
@@ -31,5 +26,7 @@
     <input type="hidden" name="until_what_date" value="123">
     <button type="submit" class="btn btn-outline-success">Booking</button>
 </form>
+
+<fmt:message key="logOut"/>
 </body>
 </html>

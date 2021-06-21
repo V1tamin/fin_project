@@ -13,7 +13,7 @@ import java.util.Map;
 import static constant.Constants.*;
 
 /**
- * @author Anton Lopatin on 19.06.2021
+ * @author Anton Lopatin on 21.06.2021
  */
 public class SelectTimeBookingApartmentCommand implements Command {
     @Override

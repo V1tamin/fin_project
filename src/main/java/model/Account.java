@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 18.06.2021
  */
 public class Account implements Serializable {
     private String id;

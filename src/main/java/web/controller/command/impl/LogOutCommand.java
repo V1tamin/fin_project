@@ -11,13 +11,13 @@ import static constant.Constants.INDEX_JSP;
 import static constant.Constants.PAGE;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class LogOutCommand implements Command {
     @Override
     public Map<String, Object> execute(HttpServletRequest request, HttpServletResponse response) {
-        request.getSession().invalidate();
         Map<String, Object> map = new HashMap<>();
+        request.getSession().invalidate();
         map.put(PAGE, INDEX_JSP);
         return map;
     }

@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.Map;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 19.06.2021
  */
 public interface Command {
     Map<String, Object> execute(HttpServletRequest request, HttpServletResponse response)

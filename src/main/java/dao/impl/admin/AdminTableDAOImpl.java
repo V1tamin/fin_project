@@ -18,7 +18,7 @@ import static constant.Constants.*;
 import static constant.SQLConstants.SELECT_ALL_CLIENTS;
 
 /**
- * @author Anton Lopatin on 07.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class AdminTableDAOImpl implements ITableDAO {
     private static final Logger logger = LogManager.getLogger();

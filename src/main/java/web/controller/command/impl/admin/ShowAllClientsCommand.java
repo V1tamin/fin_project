@@ -25,7 +25,7 @@ import static constant.Constants.LASTNAME;
 import static constant.SQLConstants.SELECT_ALL_CLIENTS;
 
 /**
- * @author Anton Lopatin on 08.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 
 public class ShowAllClientsCommand implements Command {

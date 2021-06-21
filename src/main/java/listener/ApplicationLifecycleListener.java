@@ -11,7 +11,7 @@ import javax.servlet.annotation.WebListener;
 import java.util.Properties;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 @WebListener
 public class ApplicationLifecycleListener implements ServletContextListener {

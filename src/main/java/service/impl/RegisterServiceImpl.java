@@ -18,7 +18,7 @@ import java.util.Optional;
 import static constant.SQLConstants.INSERT_NEW_USER;
 
 /**
- * @author Anton Lopatin on 07.06.2021
+ * @author Anton Lopatin on 20.06.2021
  */
 public class RegisterServiceImpl implements RegisterService {
     private static final Logger logger = LogManager.getLogger();

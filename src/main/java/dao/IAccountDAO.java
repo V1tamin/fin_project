@@ -2,11 +2,10 @@ package dao;
 
 import model.Account;
 
-import java.util.List;
 import java.util.Optional;
 
 /**
- * @author Anton Lopatin on 28.05.2021
+ * @author Anton Lopatin on 19.06.2021
  */
 public interface IAccountDAO {
     Optional<Account> findByName(String name);

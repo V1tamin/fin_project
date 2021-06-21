@@ -23,7 +23,7 @@ import static constant.Constants.COMMAND;
 import static constant.Constants.PAGE;
 
 /**
- * @author Anton Lopatin on 25.05.2021
+ * @author Anton Lopatin on 19.06.2021
  */
 @WebServlet(name = "controller", value = "/controller")
 public class ServletController extends HttpServlet {
@@ -40,14 +40,14 @@ public class ServletController extends HttpServlet {
         commands.put("reg", new RegisterCommand());
         commands.put("apartments", new ApartmentsCommand());
         commands.put("error", new NotFoundErrorCommand());
-        commands.put("parlor", new PersonalParlorCommand());//change or remove because this command is not used
         commands.put("admin_auth", new AdminLoginCommand());
         commands.put("manager_auth", new ManagerLoginCommand());
         commands.put("all_clients", new ShowAllClientsCommand());
+        commands.put("all_apartments", new ShowAllApartmentsCommand());
         commands.put("admin_patrol", new AdminPersonalPatrolCommand());
         commands.put("delete_user", new DeleteUserCommand());
         commands.put("create_new_user_admin", new CreateNewUserCommand());
-        //commands.put("insert_user", new CreateNewUserCommand());
+        commands.put("edit_user_info", new EditUserInfoCommand());
         commands.put("select_time_booked", new SelectTimeBookingApartmentCommand());
         commands.put("booked_apartment", new BookedApartmentCommand());
     }

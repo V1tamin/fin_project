@@ -12,7 +12,7 @@
 <h2>All clients</h2>
 
 <form action="${pageContext.request.contextPath}/controller" method="post">
-    <input type="hidden" name="command" value="add_user">
+    <input type="hidden" name="command" value="create_new_user_admin">
     <button class="btn btn-outline-success m-3">Add new user</button>
 </form>
 
