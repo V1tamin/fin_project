@@ -27,10 +27,8 @@ public class IndexCommand implements Command {
         Map<String, Object> map = new HashMap<>();
         Account ac = (Account) request.getSession().getAttribute(USER);
         if (ac != null) {
-            System.out.println("Session: " + request.getSession().getAttribute(USER));
             Optional<Account> authClient = accountDAO.findById(ac.getId());
             if (authClient.isPresent()) {
-                System.out.println("auth user: " + authClient.get());
                 request.getSession().setAttribute(USER, authClient);
             } else {
                 request.getSession().setAttribute("guest", null);

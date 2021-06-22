@@ -19,7 +19,6 @@ public class BookedApartmentCommand implements Command {
     @Override
     public Map<String, Object> execute(HttpServletRequest request, HttpServletResponse response) throws SQLException, NamingException {
         Map<String, Object> map = new HashMap<>();
-        System.out.println("date: " + request.getAttribute("until_what_date"));
         map.put(PAGE, SELECT_TIME_BOOKING_APARTMENT_JSP);
         return map;
     }

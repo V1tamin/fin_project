@@ -16,7 +16,6 @@ import java.util.Properties;
 @WebListener
 public class ApplicationLifecycleListener implements ServletContextListener {
     private static final Logger logger = LogManager.getLogger();
-    private final Properties props = new Properties();
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
