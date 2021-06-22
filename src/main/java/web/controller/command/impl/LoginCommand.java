@@ -38,7 +38,7 @@ public class LoginCommand implements Command {
             loginMap = loginService.login(username, password);
             Optional<Account> account = (Optional<Account>) loginMap.get(USER);
             if (account.isPresent()) {
-                initSession(request, map, loginMap, account.get());
+                initSession(request, account.get());
                 map.put(PAGE, INDEX_JSP);
             } else {
                 map.put(PAGE, LOGIN_JSP);
@@ -50,7 +50,7 @@ public class LoginCommand implements Command {
         return map;
     }
 
-    private void initSession(HttpServletRequest request, Map<String, Object> map, Map<String, Object> loginMap, Account account) {
+    private void initSession(HttpServletRequest request, Account account) {
         HttpSession session = request.getSession(true);
         session.setMaxInactiveInterval(-1);
         session.setAttribute(USER, account);
